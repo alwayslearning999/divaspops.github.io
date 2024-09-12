@@ -1,0 +1,93 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts</title>
+    <style>
+        .cabecalho{
+    color: white;
+    background-color: purple;
+    grid-area: cabecalho;
+}
+
+.navbar{
+    display: flex; /*uma (div) ao lado da outra*/
+    background-color: black;
+    grid-area: menu;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.navbaritem{
+    background-color: blueviolet;
+    color: white;
+    margin-right:10px;
+    padding:5px;
+}
+.conteudo{
+    background-color: lightgrey;
+   grid-area: central;
+}
+
+.conteudoitem{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    color:white;
+    padding-left: 20%;  
+    padding-right: 20%;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+.lateralEsquerda{
+    background-color: blue;
+    grid-area: esquerda;
+}
+
+.lateralDireita{
+    background-color: blue;
+    grid-area: direita;
+}
+.container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 5% auto;
+    grid-template-areas: 
+    "cabecalho cabecalho cabecalho"
+    "menu menu menu"
+    "esquerda central direita";
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h1>Divas POPs</h1>
+        </div>
+        <div class="navbar"><!--nav bar = menu com barra de navegaçao-->
+            <div class="navbaritem">Lady Gaga</div>
+            <div class="navbaritem">Beyonce</div>
+            <div class="navbaritem">Rihanna</div>
+        </div>
+        <div class="lateralEsquerda">
+
+        </div>
+        <div class="conteudo">
+            <div class="conteudoitem">
+                <p>Lady Gaga (1986) é uma cantora, compositora, instrumentista e produtora musical norte-americana, uma das maiores representantes do Show Business mundial. Gaga se tornou um ícone do universo pop. Em 2019, foi premiada com o Oscar de Melhor Canção Original com Shallow
+            </div>
+            <div class="conteudoitem">
+                <p>Beyoncé nasceu no dia 4 de setembro de 1981, em Houston, nos Estados Unidos, e é um dos maiores nomes da música pop de todos os tempos. A artista canta desde a infância, mas tornou-se conhecida em 1997 como uma das vocalistas do R&B Destiny's Child – grupo feminino de R&B que já vendeu mais de 50 milhões de discos.
+            </div>
+            <div class="conteudoitem">
+                <p>Robyn Rihanna Fenty (Saint Michael, 20 de fevereiro de 1988), mais conhecida como Rihanna, é uma cantora, compositora, filantropa, atriz, empresária, modelo, estilista, produtora e heroína barbadense. Uma das maiores e mais influentes artistas femininas da história.
+            </div>
+        </div>
+        <div class="lateralDireita">
+
+        </div>
+    </div>
+</body>
+</html>
